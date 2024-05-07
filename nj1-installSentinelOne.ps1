@@ -1,13 +1,13 @@
 # NinjaOne Script to Install SentinelOne
 # 
-# version 1.03
+# Version 1.04
 #
 
-#Establish variable called from documentation fields
+# Establish variable called from documentation fields
 
 $packageid = Ninja-Property-Docs-Get 'Applications' 'SentinelOne' packageID 
 
-#installer variables
+# Installer variables
 
 $DownloadURL = "https://files.monocleitsolutions.com/s/YJoyrYMXrF93e28/download/SentinelInstaller_windows_64bit_v23_4_2_216.msi"
 $DownloadLocation = "C:\MITSS1\23.4.2\" 

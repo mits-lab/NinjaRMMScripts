@@ -1,6 +1,6 @@
 # NinjaOne Script to Install SentinelOne
 # 
-# version 1.02
+# version 1.03
 #
 
 #Establish variable called from documentation fields
@@ -11,8 +11,24 @@ $packageid = Ninja-Property-Docs-Get 'Applications' 'SentinelOne' packageID
 
 $DownloadURL = "https://files.monocleitsolutions.com/s/YJoyrYMXrF93e28/download/SentinelInstaller_windows_64bit_v23_4_2_216.msi"
 $DownloadLocation = "C:\MITSS1\23.4.2\" 
+$Date = Get-Date | Out-String
 
 # Test DownloadLocation to make sure that nothing is overwritten, create folder if missing, and download zip from file server
+
+function InstalledCheck
+{
+if (Test-Path "C:\Program Files\SentinelOne\Sentinel Agent*\SentinelAgent.exe") 
+    {
+	        Ninja-Property-Set SentinelOneFailedInstall $Date
+            Write-Output "===== SentinelOneAgent: SentinelOne is currently installed. No actions taken."
+            Exit
+    } 
+     else 
+    {
+    }
+}
+
+InstalledCheck;
 
 function TempPath
 {
@@ -43,5 +59,4 @@ msiexec.exe /i "$DownloadLocation\SentinelInstaller_windows_64bit_v23_4_2_216.ms
 
 # Add log of the installation to RMM
 
-$date = Get-Date | Out-String
-Ninja-Property-Set SentinelOneInstalled $date
+Ninja-Property-Set SentinelOneInstalled $Date

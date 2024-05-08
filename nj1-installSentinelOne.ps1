@@ -13,7 +13,7 @@ $DownloadURL = "https://files.monocleitsolutions.com/s/YJoyrYMXrF93e28/download/
 $DownloadLocation = "C:\MITSS1\23.4.2\" 
 $Date = Get-Date | Out-String
 
-# Test DownloadLocation to make sure that nothing is overwritten, create folder if missing, and download zip from file server
+# Checks to see if S1 is already installed
 
 function InstalledCheck
 {
@@ -29,6 +29,8 @@ if (Test-Path "C:\Program Files\SentinelOne\Sentinel Agent*\SentinelAgent.exe")
 }
 
 InstalledCheck;
+
+# Test DownloadLocation to make sure that it's empty and ready to receive the software package. Creates the folder if missing.
 
 function TempPath
 {

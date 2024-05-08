@@ -56,8 +56,8 @@ Set-Location -Path $DownloadLocation
 
 #Executing msiexec command to install S1 while using unique Site Token from each organization
 
-#msiexec.exe /i "$DownloadLocation\SentinelInstaller_windows_64bit_v23_4_2_216.msi" /qn SITE_TOKEN="$packageid"
-msiexec.exe /i "$DownloadLocation\SentinelInstaller_windows_64bit_v23_4_2_216.msi" /q /NORESTART SITE_TOKEN="$packageID"
+msiexec.exe /i "$DownloadLocation\SentinelInstaller_windows_64bit_v23_4_2_216.msi" /qn SITE_TOKEN="$packageID"
+#msiexec.exe /i "$DownloadLocation\SentinelInstaller_windows_64bit_v23_4_2_216.msi" /q /NORESTART SITE_TOKEN="$packageID"
 
 # Add log of the installation to RMM
 

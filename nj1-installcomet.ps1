@@ -54,7 +54,7 @@ Expand-Archive -Path "$DownloadLocation\DATACAGELITE_24.2.3.zip" -DestinationPat
 
 # Executing msiexec command to install Comet backup using unique username and password for each user
 
-Start-Process "$DownloadLocation\install.exe" -ArgumentList "/S", "/LOBBY", "/SHORTCUT=disable", "/TRAYICON=disable"
+Start-Process "$DownloadLocation\install.exe" -ArgumentList "/S", "/LOBBY", "/SHORTCUT=disable", "/TRAYICON=disable", "/SERVER='https://comet.monocleitsolutions.com/'"
 
 # Log app installation
 

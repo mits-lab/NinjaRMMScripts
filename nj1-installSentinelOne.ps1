@@ -5,7 +5,7 @@
 
 # Establish variable called from documentation fields
 
-$packageid = Ninja-Property-Docs-Get 'Applications' 'SentinelOne' packageID 
+$packageid = Ninja-Property-Docs-Get 'Application' 'SentinelOne' packageID 
 
 # Installer variables
 

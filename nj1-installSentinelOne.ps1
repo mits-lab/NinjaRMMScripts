@@ -10,7 +10,7 @@ $packageid = Ninja-Property-Docs-Get 'Application' 'SentinelOne' packageID
 # Installer variables
 
 $DownloadURL = "https://files.monocleitsolutions.com/s/YJoyrYMXrF93e28/download/SentinelInstaller_windows_64bit_v23_4_2_216.msi"
-$DownloadLocation = "C:\MITSS1\23.4.2\" 
+$DownloadLocation = "C:\MITS\S1\23.4.2\" 
 $Date = Get-Date | Out-String
 
 # Checks to see if S1 is already installed

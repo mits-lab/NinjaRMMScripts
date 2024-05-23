@@ -6,7 +6,7 @@
 # Download installer to Local directory
 
 $DownloadURL = "https://files.monocleitsolutions.com/s/5yWoGYq6Neeej6y/download/DATACAGE%20LITE%2024.2.3.zip"
-$DownloadLocation = "C:\MITSCB\2024.2.3\"
+$DownloadLocation = "C:\MITS\DCL\2024.2.3\"
 $date = Get-Date | Out-String
 
 # Test DownloadLocation to make sure that nothing is overwritten, create folder if missing, and download zip from file server

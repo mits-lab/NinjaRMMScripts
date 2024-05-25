@@ -11,7 +11,7 @@
 [CmdletBinding()]
 param(
     # Path to output battery report files to.
-    [System.IO.DirectoryInfo]$OutputPath = 'C:\MITS\Data\Battery'
+    [System.IO.DirectoryInfo]$OutputPath = 'C:\MITS-Data\Battery'
 )
 
 if (-not (Test-Path -Path $OutputPath)) {

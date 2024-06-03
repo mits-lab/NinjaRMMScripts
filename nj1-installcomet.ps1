@@ -5,17 +5,31 @@
 
 # Download installer to Local directory
 
-$DownloadURL = "https://files.monocleitsolutions.com/s/5yWoGYq6Neeej6y/download/DATACAGE%20LITE%2024.2.3.zip"
-$DownloadLocation = "C:\MITS\DCL\2024.2.3\"
+$DownloadURL = "https://files.monocleitsolutions.com/s/5yWoGYq6Neeej6y/download/DATACAGE%20LIT3%2024.2.3.zip"
+$DownloadLocation = "C:\MITSCB\"
 $date = Get-Date | Out-String
 
-# Test DownloadLocation to make sure that nothing is overwritten, create folder if missing, and download zip from file server
+# Test DownloadLocation to make sure that nothing is overwritten, create folder if missing, and download zip from file server.
+
+function InstalledCheck
+{
+if (Test-Path "C:\Program Files\DATACAGE LITE\launch.exe") 
+    {
+        Write-Output "=== CometAgent: Comet Agent is currently installed. No actions taken. ==="
+        Exit
+    } 
+     else 
+    {
+    }
+}
+
+InstalledCheck;
 
 function TempPath
 {
     if(Test-Path $DownloadLocation)
     {
-        Remove-Item "$DownloadLocation\*";
+        Get-ChildItem -Path $DownloadLocation -File -Recurse | Remove-Item -Force;
     }
     else
     {
@@ -24,21 +38,6 @@ function TempPath
 }
 
 TempPath;
-
-function InstalledCheck
-{
-if (Test-Path "C:\Program Files\DATACAGE LITE\launch.exe") 
-    {
-	        Ninja-Property-Set CometAgentFailedInstall $Date
-            Write-Output "===== CometAgent: Comet Agent is currently installed. No actions taken."
-            Exit
-    } 
-     else 
-    {
-    }
-}
-
-InstalledCheck;
 
 # Download application package to $DownloadLocation
 
@@ -58,4 +57,4 @@ Start-Process "$DownloadLocation\install.exe" -ArgumentList "/S", "/LOBBY", "/SH
 
 # Log app installation
 
-Ninja-Property-Set CometbackupInstalled $date
+Ninja-Property-Set cometinstalldate $date

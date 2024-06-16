@@ -9,7 +9,7 @@ $packageid = Ninja-Property-Docs-Get "Application" "SentinelOne" packageID
 
 # Installer variables
 
-$DownloadURL = "https://files.monocleitsolutions.com/s/YJoyrYMXrF93e28/download/SentinelInstaller_windows_64bit_v23_4_2_226.msi"
+$DownloadURL = "https://files.example.com/SentinelInstaller_windows_64bit_v23_4_2_226.msi"
 $DownloadLocation = "C:\MITSS1\23.4.2\" 
 $Date = Get-Date | Out-String
 

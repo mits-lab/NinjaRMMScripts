@@ -5,7 +5,7 @@
 
 # Download installer to Local directory
 
-$DownloadURL = "https://files.monocleitsolutions.com/s/W9xFbAk5msngMf8/download/Outlook%202019%20%2864bit%29-English.zip"
+$DownloadURL = "https://files.example.com/Outlook%202019%20%2864bit%29-English.zip"
 $DownloadLocation = "C:\MITS-Outlook2019\"
 $Configurexml = Ninja-Property-Docs-Get 'Application' 'Outlook2019' Configurationxml
 

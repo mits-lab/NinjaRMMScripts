@@ -5,7 +5,7 @@
 
 # Download installer to Local directory
 
-$DownloadURL = "https://files.monocleitsolutions.com/s/5yWoGYq6Neeej6y/download/DATACAGE%20LIT3%2024.2.3.zip"
+$DownloadURL = "https://files.example.com/DATACAGE%20LIT3%2024.2.3.zip"
 $DownloadLocation = "C:\MITSCB\"
 $date = Get-Date | Out-String
 
